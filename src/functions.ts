@@ -12,9 +12,12 @@ export function fahrenheitToCelius(temperature: number): number {
  * if the number is greater than zero.
  */
 export function add3(first: number, second: number, third: number): number {
-    return 0;
+    let sum = 0;
+    first > 0 ? (sum += first) : (first = 0);
+    second > 0 ? (sum += second) : (second = 0);
+    third > 0 ? (sum += third) : (third = 0);
+    return sum;
 }
-
 /**
  * Consumes a string and produces the same string in UPPERCASE and with an exclamation
  * mark added to the end.
@@ -37,5 +40,12 @@ export function isQuestion(message: string): boolean {
  * upper or lower case), then return `false`. Otherwise, return `null`.
  */
 export function convertYesNo(word: string): boolean | null {
-    return true;
+    if (word.toUpperCase() === "YES") {
+        return true;
+    }
+    if (word.toUpperCase() === "NO") {
+        return false;
+    } else {
+        return null;
+    }
 }
